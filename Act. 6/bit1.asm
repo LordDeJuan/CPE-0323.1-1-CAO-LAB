@@ -2,7 +2,7 @@ TITLE bit.asm
 .model small
 .stack 100h
 .data
-num db 03Dh
+num db 0ah
 .code
 main proc
 movax,@data
