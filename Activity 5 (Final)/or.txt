@@ -12,7 +12,7 @@ LP1: mov dl,[bx]
 Cmp dl, '$'
 Je exit
 Incbx
-;insert code here
+or dl, 00100000B
 mov ah,02
 int 21h
 jmp lp1
