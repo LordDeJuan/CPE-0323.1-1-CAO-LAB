@@ -18,6 +18,17 @@ Mov ax, 4c00h
 Int 21h
 Main endp
 
+
+Pcrlf proc
+Mov dl,0ah 
+Mov ah,2
+Int 21h 
+Mov dl,0dh 
+Mov ah,2
+Int 21h
+Ret
+Pcrlf endp
+
 Out1hex proc 
 And al,0fh 
 Cmp al,9 
@@ -31,13 +42,4 @@ Int 21h
 Ret
 Out1hex endp
 
-Pcrlf proc
-Mov dl,0ah 
-Mov ah,2
-Int 21h 
-Mov dl,0dh 
-Mov ah,2
-Int 21h
-Ret
-Pcrlf endp
 End main
